@@ -1,0 +1,3 @@
+@lxpanel --profile AlanDE
+@pcmanfm --desktop --profile AlanDE
+#@xscreensaver -no-splash
