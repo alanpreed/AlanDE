@@ -45,6 +45,7 @@ if  !(hash git 2>/dev/null);  then
 	pacman -S git
 fi
 
-#Install AUR packages
+# #Install AUR packages
 for pkg in aur_list; do
-	print pkg
+	echo "Installing $pkg"
+done
