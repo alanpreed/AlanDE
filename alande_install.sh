@@ -51,7 +51,7 @@ for pkg in "${aur_list[@]}"; do
 		echo "Installing $pkg "
 		git clone $aur_address$pkg
 		cd $pkg
-		makepkg -sri
+		makepkg -sri --noconfirm
 		cd ..
 	else
 		echo "$pkg is already installed, skipping."
@@ -60,8 +60,12 @@ done
 
 #Install repository packages
 for pkg in "${repo_list[@]}"; do
-	echo "Installing $pkg"
-	sudo pacman -S $pkg
+	if !(pacman -Q $pkg 1>/dev/null); then
+		echo "Installing $pkg"
+		sudo pacman -S $pkg --noconfirm
+	else
+		echo "$pkg is already installed, skipping."
+	fi
 done
 
 #Install AlanDE packages
