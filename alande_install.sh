@@ -48,11 +48,15 @@ fi
 
 # #Install AUR packages
 for pkg in "${aur_list[@]}"; do
-	echo "Installing $pkg"
-	git clone $aur_address$pkg
-	cd $pkg
-	makepkg -sri
-	cd ..
+	if !(pacman -Q $pkg 1>/dev/null); then
+		echo "Installing $pkg "
+		git clone $aur_address$pkg
+		cd $pkg
+		makepkg -sri
+		cd ..
+	else
+		echo "$pkg is already installed, skipping."
+	fi
 done
 
 #Install repository packages
