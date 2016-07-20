@@ -24,11 +24,11 @@ repo_list=('openbox' 'compton'	#WM and compositor
 
 aur_address='https://aur.archlinux.org/'
 
-#Check that we have root access
-if [ "$(whoami)" != "root" ]; then
-	echo "Please run this as root!"
-	exit 1
-fi
+# #Check that we have root access
+# if [ "$(whoami)" != "root" ]; then
+# 	echo "Please run this as root!"
+# 	exit 1
+# fi
 
 #Check that pacman is available
 if  !(hash pacman 2>/dev/null);  then
@@ -37,12 +37,12 @@ if  !(hash pacman 2>/dev/null);  then
 fi
 
 echo "Updating repositories prior to installation."
-pacman -Syu
+sudo pacman -Syu
 
 #Make sure git is available for handling AUR packages
 if  !(hash git 2>/dev/null);  then
 	echo "Git not installed. Fixing:"
-	pacman -S git
+	sudo pacman -S git
 fi
 
 
