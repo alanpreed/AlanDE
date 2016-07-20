@@ -45,7 +45,17 @@ if  !(hash git 2>/dev/null);  then
 	pacman -S git
 fi
 
+
 # #Install AUR packages
-for pkg in aur_list; do
+for pkg in "${aur_list[@]}"; do
+	echo "Installing $pkg"
+	git clone $aur_address$pkg
+	cd $pkg
+	makepkg -sri
+	cd ..
+done
+
+#Install repository packages
+for pkg in "${repo_list[@]}"; do
 	echo "Installing $pkg"
 done
