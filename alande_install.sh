@@ -5,8 +5,7 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=('cower' 'pacaur' 	#AUR helper for convenience
- 			'numix-icon-theme-git' 'numix-circle-icon-theme-git')	# Icon theme
+ aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git')	# Icon theme
 
 repo_list=('openbox' 'compton'	#WM and compositor
 			'numix-themes' 			# GTK theme
@@ -62,4 +61,9 @@ done
 #Install repository packages
 for pkg in "${repo_list[@]}"; do
 	echo "Installing $pkg"
+	sudo pacman -S $pkg
 done
+
+#Install AlanDE packages
+
+#Enable necessary systemd services
