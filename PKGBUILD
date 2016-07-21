@@ -29,7 +29,7 @@ pkgver() {
 package() {
 	cd "$srcdir/${pkgname%-git}"
 	install -d $pkgdir/usr/share/AlanDe/wallpapers/
-	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm}/AlanDE
+	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm,lxpanel}/AlanDE
 
 	install -d $pkgdir/usr/share/xsessions
 
@@ -37,4 +37,5 @@ package() {
 	cp -r configs/lxsession/. $pkgdir/etc/xdg/lxsession/AlanDE/
 	cp -r configs/pcmanfm/. $pkgdir/etc/xdg/pcmanfm/AlanDE/
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
+	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
 }
