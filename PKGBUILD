@@ -36,4 +36,5 @@ package() {
 	cp -r wallpapers/. $pkgdir/usr/share/AlanDe/wallpapers/
 	cp -r configs/lxsession/. $pkgdir/etc/xdg/lxsession/AlanDE/
 	cp -r configs/pcmanfm/. $pkgdir/etc/xdg/pcmanfm/AlanDE/
+	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
 }
