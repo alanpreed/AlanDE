@@ -12,9 +12,11 @@ depends=()
 
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("${pkgname%-git}")
-install=$pkgname.install
+install=
 source=('git+https://github.com/alanpreed/AlanDE.git')
 md5sums=('SKIP')
+
+
 
 
 pkgver() {
@@ -26,5 +28,10 @@ pkgver() {
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
-	make DESTDIR="$pkgdir/" install
+	install -d $pkgdir/usr/share/AlanDe/wallpapers/
+	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm}/AlanDE
+
+	cp -r wallpapers/ $pkgdir/usr/share/AlanDe/wallpapers/
+	cp -r configs/lxsession/ $pkgdir/etc/xdg/lxsession/AlanDE/
+	cp -r configs/pcmanfm/ $pkgdir/etc/xdg/pcmanfm/AlanDE/
 }
