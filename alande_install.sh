@@ -69,5 +69,7 @@ for pkg in "${repo_list[@]}"; do
 done
 
 #Install AlanDE packages
+makepkg -sri
 
 #Enable necessary systemd services
+sudo systemctl enable lightdm.service
