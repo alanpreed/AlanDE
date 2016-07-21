@@ -31,6 +31,8 @@ package() {
 	install -d $pkgdir/usr/share/AlanDe/wallpapers/
 	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm}/AlanDE
 
+	install -d $pkgdir/usr/share/xsessions
+
 	cp -r wallpapers/. $pkgdir/usr/share/AlanDe/wallpapers/
 	cp -r configs/lxsession/. $pkgdir/etc/xdg/lxsession/AlanDE/
 	cp -r configs/pcmanfm/. $pkgdir/etc/xdg/pcmanfm/AlanDE/
