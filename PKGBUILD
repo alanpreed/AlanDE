@@ -28,7 +28,7 @@ pkgver() {
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
-	install -d $pkgdir/usr/share/AlanDe/wallpapers/
+	install -d $pkgdir/usr/share/AlanDE/wallpapers/
 	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm,lxpanel}/AlanDE
 
 	install -d $pkgdir/usr/share/xsessions
