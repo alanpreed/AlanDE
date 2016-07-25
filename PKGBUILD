@@ -10,7 +10,7 @@ license=('unknown')
 
 depends=()
 
-makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+makedepends=('git') 
 provides=("${pkgname%-git}")
 install=
 source=('git+https://github.com/alanpreed/AlanDE.git')

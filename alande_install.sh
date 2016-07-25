@@ -5,11 +5,11 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git')	# Icon theme
+ aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git' 'midori-flash'	)	# Icon theme
 
-repo_list=('openbox' 'compton'	#WM and compositor
+repo_list=('openbox' 'compton'	# WM and compositor
 			'numix-themes' 			# GTK theme
-			'ttf-dejavu'			# Font
+			'ttf-dejavu' 'noto-font'	# Font
 			'synapse'				# Application launcher
 			'lxappearance' 'lxappearance-obconf'	# GTK theming GUI
 			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
@@ -18,7 +18,7 @@ repo_list=('openbox' 'compton'	#WM and compositor
 			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	#Display manager
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	#Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			#File manager + extensions
-			'midori' 'midori-flash'			# Web browser with flash
+			'midori' 		# Web browser (with flash plugin in AUR)
 			)
 
 aur_address='https://aur.archlinux.org/'
