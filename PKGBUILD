@@ -40,4 +40,6 @@ package() {
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
 	cp -fr configs/gtk2/. $pkgdir/etc/gtkrc-2.0/
 	cp -fr configs/gtk3/. $pkgdir/etc/gtk-3.0/
+	cp -fr configs/openbox/. $pkgdir/etc/xdg/openbox/
+	cp -fr configs/lightdm/. $pkgdir/etc/lightdm
 }
