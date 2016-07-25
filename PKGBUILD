@@ -38,4 +38,6 @@ package() {
 	cp -r configs/pcmanfm/. $pkgdir/etc/xdg/pcmanfm/AlanDE/
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
+	cp -fr configs/gtk2/. $pkgdir/etc/gtkrc-2.0/
+	cp -fr configs/gtk3/. $pkgdir/etc/gtk-3.0/
 }
