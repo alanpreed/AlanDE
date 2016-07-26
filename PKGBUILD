@@ -12,7 +12,7 @@ depends=()
 
 makedepends=('git') 
 provides=("${pkgname%-git}")
-install=("alande.install")
+install=
 source=('git+https://github.com/alanpreed/AlanDE.git')
 md5sums=('SKIP')
 
@@ -33,7 +33,6 @@ package() {
 
 	install -d $pkgdir/etc/xdg/openbox/AlanDE
 	install -d $pkgdir/etc/lightdm/AlanDE
-}
 
 	install -d $pkgdir/usr/share/xsessions
 
