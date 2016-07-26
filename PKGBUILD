@@ -12,7 +12,7 @@ depends=()
 
 makedepends=('git') 
 provides=("${pkgname%-git}")
-install=
+install=("alande.install")
 source=('git+https://github.com/alanpreed/AlanDE.git')
 md5sums=('SKIP')
 
@@ -31,6 +31,10 @@ package() {
 	install -d $pkgdir/usr/share/AlanDE/wallpapers/
 	install -d $pkgdir/etc/xdg/{lxsession,pcmanfm,lxpanel}/AlanDE
 
+	install -d $pkgdir/etc/xdg/openbox/AlanDE
+	install -d $pkgdir/etc/lightdm/AlanDE
+}
+
 	install -d $pkgdir/usr/share/xsessions
 
 	cp -r wallpapers/. $pkgdir/usr/share/AlanDE/wallpapers/
@@ -40,6 +44,7 @@ package() {
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
 	cp -fr configs/gtk2/. $pkgdir/etc/gtkrc-2.0/
 	cp -fr configs/gtk3/. $pkgdir/etc/gtk-3.0/
-	cp -fr configs/openbox/. $pkgdir/etc/xdg/openbox/
-	cp -fr configs/lightdm/. $pkgdir/etc/lightdm
+
+	cp -fr configs/openbox/. $pkgdir/etc/xdg/openbox/AlanDE
+	cp -fr configs/lightdm/. $pkgdir/etc/lightdm/AlanDE
 }
