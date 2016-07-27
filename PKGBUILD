@@ -12,7 +12,11 @@ depends=()
 
 makedepends=('git') 
 provides=("${pkgname%-git}")
+<<<<<<< HEAD
 install="${pkgname%-git}.install"
+=======
+install=
+>>>>>>> 84819744a37f748002eaf74a64eeb9404e0d67df
 source=('git+https://github.com/alanpreed/AlanDE.git')
 md5sums=('SKIP')
 
@@ -37,7 +41,11 @@ package() {
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
 
 	install -d $pkgdir/etc/xdg/openbox/AlanDE
+<<<<<<< HEAD
 	cp -fr configs/openbox/. $pkgdir/etc/xdg/openbox/AlanDE
+=======
+	install -d $pkgdir/etc/lightdm/AlanDE
+>>>>>>> 84819744a37f748002eaf74a64eeb9404e0d67df
 
 	install -d $pkgdir/usr/share/xsessions
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
