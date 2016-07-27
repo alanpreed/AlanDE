@@ -1,0 +1,8 @@
+/* Prevent Metacity from having huge window title bars */
+.ssd .titlebar {
+	padding: 0px;
+}
+
+.ssd .titlebar .button.titlebutton{
+	padding: 0px;
+}
