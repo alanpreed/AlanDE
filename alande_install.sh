@@ -7,11 +7,12 @@
 # #AUR Dependencies:
  aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git' 'midori-flash'	)	# Icon theme
 
-repo_list=('openbox' 'compton'	# WM and compositor
+repo_list=(	'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
 			'ttf-dejavu' 'noto-font'	# Font
 			'synapse'				# Application launcher
-			'lxappearance' 'lxappearance-obconf'	# GTK theming GUI
+			'lxappearance' 	# GTK theming GUI
+			# 'lxappearance-obconf' 'openbox' 'compton'	#Trying out metacity instead of openbox
 			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
