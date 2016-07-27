@@ -12,11 +12,8 @@ depends=()
 
 makedepends=('git') 
 provides=("${pkgname%-git}")
-<<<<<<< HEAD
 install="${pkgname%-git}.install"
-=======
-install=
->>>>>>> 84819744a37f748002eaf74a64eeb9404e0d67df
+
 source=('git+https://github.com/alanpreed/AlanDE.git')
 md5sums=('SKIP')
 
