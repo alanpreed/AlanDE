@@ -2,7 +2,7 @@
 
 # Maintainer: Alan Reed
 pkgname=AlanDE-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r30.c8b8872
+pkgver=r36.e66a4b5
 pkgrel=1
 pkgdesc="Alan's Desktop Environment"
 arch=('x86_64')
@@ -34,6 +34,12 @@ package() {
 	cp -r configs/lxsession/. $pkgdir/etc/xdg/lxsession/AlanDE/
 	cp -r configs/pcmanfm/. $pkgdir/etc/xdg/pcmanfm/AlanDE/
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
+	
+	install -d $pkgdir/etc/xdg/libfm/AlanDE
+	cp -r configs/libfm/. $pkgdir/etc/xdg/libfm/AlanDE/
+
+	install -d $pkgdir/etc/xdg/synapse/AlanDE
+	cp -r configs/synapse/. $pkgdir/etc/xdg/synapse/AlanDE/
 
 	install -d $pkgdir/etc/xdg/openbox/AlanDE
 	cp -fr configs/openbox/. $pkgdir/etc/xdg/openbox/AlanDE

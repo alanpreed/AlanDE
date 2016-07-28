@@ -9,7 +9,11 @@
 
 # arg 1:  the new package version
 post_install() {
+	# Metacity config overrides require gschema recompiling
 	glib-compile-schemas /usr/share/glib-2.0/schemas
+
+	# GTK css tweaks need to be in users config directory
+	cp -f /etc/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
 }
 
 ## arg 1:  the new package version
@@ -21,7 +25,11 @@ post_install() {
 # arg 1:  the new package version
 # arg 2:  the old package version
 post_upgrade() {
+	# Metacity config overrides require gschema recompiling
 	glib-compile-schemas /usr/share/glib-2.0/schemas
+
+	# GTK css tweaks need to be in users config directory
+	cp -f /etc/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
 }
 
 ## arg 1:  the old package version
@@ -31,5 +39,9 @@ post_upgrade() {
 
 # arg 1:  the old package version
 post_remove() {
+	# Revert Metacity config changes
 	glib-compile-schemas /usr/share/glib-2.0/schemas
+
+	# Remove custom GTK css file
+	rm $HOME/.config/gtk-3.0/gtk.css
 }
