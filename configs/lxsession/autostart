@@ -2,5 +2,4 @@ setxkbmap gb
 @lxpanel --profile AlanDE
 @pcmanfm --desktop --profile AlanDE
 @synapse -s
-# @compton --no-fading-destroyed-argb -b
 # @xscreensaver -no-splash
