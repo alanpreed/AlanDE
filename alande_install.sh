@@ -69,8 +69,15 @@ for pkg in "${repo_list[@]}"; do
 	fi
 done
 
-#Install AlanDE package
+# Install AlanDE package
 makepkg -sri --noconfirm
 
-#Enable necessary systemd services
+# Enable necessary systemd services
 sudo systemctl enable lightdm.service
+
+# Symlink user config files.  As far as I can tell, these config files HAVE to be in a user's home
+# directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
+
+# GTK tweaks to fix Metacity title bar size
+ln -s "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
+
