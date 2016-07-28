@@ -78,8 +78,8 @@ ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
 
 # Custom Synapse config file
 mkdir -p $HOME/.config/synapse/
-ln -fs "/etc/xdg/synapse/config.json" "$HOME/.config/synapse/config.json"
+ln -fs "/etc/xdg/synapse/AlanDE/config.json" "$HOME/.config/synapse/config.json"
 
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/
-ln -fs "/etc/xdg/libfm/libfm.conf" "$HOME/.config/libfm/libfm.conf"
+ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
