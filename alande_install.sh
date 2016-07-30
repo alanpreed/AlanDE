@@ -5,9 +5,10 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git' 'nspluginwrapper' 'midori-flash'	)	# Icon theme
+ aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'  'midori-flash'	'sublime-text')
 
-repo_list=(	'metacity'		# WM and compositor
+repo_list=(	
+			'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
 			'ttf-dejavu' 'noto-font'	# Font
 			'synapse'				# Application launcher
@@ -21,7 +22,7 @@ repo_list=(	'metacity'		# WM and compositor
 			# Temporary
 			'midori' 		# Web browser (with flash plugin in AUR)
 			'lxappearance' 	# GTK theming GUI
-			'sublime-text'
+			'nspluginwrapper'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -87,5 +88,6 @@ ln -fs "/etc/xdg/synapse/AlanDE/config.json" "$HOME/.config/synapse/config.json"
 mkdir -p $HOME/.config/libfm/
 ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
 
-# LightDM config
+# LightDM greeter config - can't find any way to override the default config file
+sudo rm "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf"
 ln -fs "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
