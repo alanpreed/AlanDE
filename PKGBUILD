@@ -2,7 +2,7 @@
 
 # Maintainer: Alan Reed
 pkgname=AlanDE-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r36.e66a4b5
+pkgver=r48.6e76545
 pkgrel=1
 pkgdesc="Alan's Desktop Environment"
 arch=('x86_64')

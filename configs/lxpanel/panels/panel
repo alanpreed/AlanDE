@@ -27,16 +27,6 @@ Plugin {
   }
 }
 Plugin {
-  type=netstatus
-  Config {
-  }
-}
-Plugin {
-  type=volumealsa
-  Config {
-  }
-}
-Plugin {
   type=pager
   Config {
   }
@@ -83,6 +73,11 @@ Plugin {
   }
 }
 Plugin {
+  type=volumealsa
+  Config {
+  }
+}
+Plugin {
   type=dclock
   Config {
     ClockFmt=%R
@@ -90,5 +85,11 @@ Plugin {
     BoldFont=0
     IconOnly=0
     CenterText=0
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
   }
 }
