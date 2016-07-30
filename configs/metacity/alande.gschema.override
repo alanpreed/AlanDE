@@ -2,7 +2,185 @@
 alt-tab-thumbnails=true
 
 [org.gnome.desktop.wm.keybindings]
+
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
 switch-to-workspace-3=['<Alt>3']
 switch-to-workspace-4=['<Alt>4']
+
+switch-to-workspace-left=['<Control><Alt>Left']
+switch-to-workspace-right=['<Control><Alt>Right']
+switch-to-workspace-up=['<Super>Page_Up','<Control><Alt>Up']
+switch-to-workspace-down=['<Super>Page_Down','<Control><Alt>Down']
+switch-to-workspace-last=['<Super>End']
+
+# Switch windows of an application
+switch-group=['<Super>Above_Tab','<Alt>Above_Tab']
+
+# Reverse switch windows of an application
+switch-group-backward=['<Shift><Super>Above_Tab','<Shift><Alt>Above_Tab']
+
+# Switch applications
+switch-applications=['<Super>Tab','<Alt>Tab']
+
+# Reverse switch applications
+switch-applications-backward=['<Shift><Super>Tab','<Shift><Alt>Tab']
+
+switch-windows=[]
+
+switch-windows-backward=[]
+
+# Switch system controls
+switch-panels=['<Control><Alt>Tab']
+
+switch-panels-backward=['<Shift><Control><Alt>Tab']
+# Reverse switch system controls
+
+# Switch windows of an app directly
+cycle-group=['<Alt>F6']
+
+# Reverse switch windows of an app directly
+cycle-group-backward=['<Shift><Alt>F6']
+
+# Switch windows directly
+cycle-windows=['<Alt>Escape']
+
+# Reverse switch windows directly
+cycle-windows-backward=['<Shift><Alt>Escape']
+
+# Switch system controls directly
+cycle-panels=['<Control><Alt>Escape']
+
+# Reverse switch system controls directly
+cycle-panels-backward=['<Shift><Control><Alt>Escape']
+
+# Hide all normal windows
+show-desktop=[]
+
+# Show the activities overview
+panel-main-menu=['<Super>s','<Alt>F1']
+
+# Show the run command prompt
+panel-run-dialog=['<Alt>F2']
+
+# Activate the window menu
+activate-window-menu=['<Alt>space']
+
+# Toggle fullscreen mode
+toggle-fullscreen=[]
+
+# Toggle maximization state
+toggle-maximized=['<Alt>F10']
+
+# Toggle window always appearing on top
+toggle-above=[]
+
+# Maximize window
+maximize=['<Super>Up']
+
+# Restore window
+unmaximize=['<Super>Down','<Alt>F5']
+
+# Toggle shaded state
+toggle-shaded=[]
+
+# Minimize window
+minimize=['<Super>h']
+
+# Close window
+close=['<Alt>F4']
+
+# Move window
+begin-move=['<Alt>F7']
+
+# Resize window
+begin-resize=['<Alt>F8']
+
+# Toggle window on all workspaces or one
+toggle-on-all-workspaces=[]
+
+# Move window to workspace
+move-to-workspace-1=['<Super><Shift>Home']
+move-to-workspace-2=[]
+move-to-workspace-3=[]
+move-to-workspace-4=[]
+
+# Move window to last workspace
+move-to-workspace-last=['<Super><Shift>End']
+
+# Move window one workspace to the left
+move-to-workspace-left=['<Control><Shift><Alt>Left']
+
+# Move window one workspace to the right
+move-to-workspace-right=['<Control><Shift><Alt>Right']
+
+# Move window one workspace up
+move-to-workspace-up=['<Super><Shift>Page_Up','<Control><Shift><Alt>Up']
+
+# Move window one workspace down
+move-to-workspace-down=['<Super><Shift>Page_Down','<Control><Shift><Alt>Down']
+
+# Move window to the next monitor on the left
+move-to-monitor-left=['<Super><Shift>Left']
+
+# Move window to the next monitor on the right
+move-to-monitor-right=['<Super><Shift>Right']
+
+# Move window to the next monitor above
+move-to-monitor-up=['<Super><Shift>Up']
+
+# Move window to the next monitor below
+move-to-monitor-down=['<Super><Shift>Down']
+
+# Raise window if covered, otherwise lower it
+raise-or-lower=[]
+
+# Raise window above other windows
+raise=[]
+
+# Lower window below other windows
+lower=[]
+
+# Maximize window vertically
+maximize-vertically=[]
+
+# Maximize window horizontally
+maximize-horizontally=[]
+
+# Move window to top left corner
+move-to-corner-nw=[]
+
+# Move window to top right corner
+move-to-corner-ne=[]
+
+# Move window to bottom left corner
+move-to-corner-sw=[]
+
+# Move window to bottom right corner
+move-to-corner-se=[]
+
+# Move window to top edge of screen
+move-to-side-n=[]
+
+# Move window to bottom edge of screen
+move-to-side-s=[]
+
+# Move window to right side of screen
+move-to-side-e=[]
+
+# Move window to left side of screen
+move-to-side-w=[]
+
+# Move window to center of screen
+move-to-center=[]
+
+# Binding to select the next input source
+switch-input-source=['<Super>space']
+
+# Binding to select the previous input source
+switch-input-source-backward=['<Shift><Super>space']
+
+# Toggle window to be always on top
+always-on-top=[]
+
+
