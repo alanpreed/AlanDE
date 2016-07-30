@@ -72,6 +72,7 @@ makepkg -sri --noconfirm
 
 # Enable necessary systemd services
 sudo systemctl enable lightdm.service
+sudo systemctl enable NetworkManager.service
 
 # Symlink user config files.  As far as I can tell, these config files HAVE to be in a user's home
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
