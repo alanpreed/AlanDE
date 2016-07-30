@@ -11,14 +11,15 @@ repo_list=(	'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
 			'ttf-dejavu' 'noto-font'	# Font
 			'synapse'				# Application launcher
-			'lxappearance' 	# GTK theming GUI
 			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	#Display manager
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	#Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			#File manager + extensions
+			# Temporary
 			'midori' 		# Web browser (with flash plugin in AUR)
+			'lxappearance' 	# GTK theming GUI
 			)
 
 aur_address='https://aur.archlinux.org/'

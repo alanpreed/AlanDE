@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Log Out
+Icon=system-log-out
+Exec=pkill -9 -f lxsession
+Comment=Log out of the desktop environment
+StartupNotify=false
+Terminal=false
+Categories=System
