@@ -90,4 +90,4 @@ ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
 
 # LightDM greeter config - can't find any way to override the default config file
 sudo rm "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf"
-ln -fs "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+sudo ln -fs "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
