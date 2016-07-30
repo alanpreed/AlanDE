@@ -88,6 +88,7 @@ ln -fs "/etc/xdg/synapse/AlanDE/config.json" "$HOME/.config/synapse/config.json"
 mkdir -p $HOME/.config/libfm/
 ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
 
-# LightDM greeter config - can't find any way to override the default config file
+# LightDM greeter config - can't find any way to override the default config file. 
+# The greeter won't follow a symlink, either.
 sudo rm "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf"
-sudo ln -fs "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+sudo cp "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
