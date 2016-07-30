@@ -15,11 +15,13 @@ repo_list=(	'metacity'		# WM and compositor
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	#Display manager
-			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	#Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			#File manager + extensions
+			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			# File manager + extensions
+			'networkmanager' 'network-manager-applet'		# Networking
 			# Temporary
 			'midori' 		# Web browser (with flash plugin in AUR)
 			'lxappearance' 	# GTK theming GUI
+			'sublime-text'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -84,3 +86,6 @@ ln -fs "/etc/xdg/synapse/AlanDE/config.json" "$HOME/.config/synapse/config.json"
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/
 ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
+
+# LightDM config
+ln -fs "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
