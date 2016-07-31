@@ -10,12 +10,12 @@
 repo_list=(	
 			'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
-			'ttf-dejavu' 'noto-font'	# Font
+			'noto-font'	# Font
 			'synapse'				# Application launcher
 			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
-			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	#Display manager
+			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			# File manager + extensions
 			'networkmanager' 'network-manager-applet'		# Networking

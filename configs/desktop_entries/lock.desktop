@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Lock Screen
+Icon=system-lock-screen
+Exec=light-locker-command -l
+Comment=Lock the computer
+StartupNotify=false
+Terminal=false
+Categories=System
