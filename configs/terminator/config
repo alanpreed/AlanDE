@@ -1,0 +1,7 @@
+[global_config]
+    title_transmit_bg_color = "#d64937"
+[profiles]
+    [[default]]
+        background_image = None
+        font = Noto Mono 10
+        use_system_font = False

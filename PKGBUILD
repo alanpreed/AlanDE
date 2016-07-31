@@ -59,6 +59,9 @@ package() {
 	install -d $pkgdir/etc/lightdm/AlanDE
 	cp -fr configs/lightdm/. $pkgdir/etc/lightdm/AlanDE
 
+	install -d $pkgdir/etc/terminator/AlanDE
+	cp -fr configs/terminator/. $pkgdir/etc/terminator/AlanDE
+
 	install -d $pkgdir/usr/share/applications
 	cp -fr configs/desktop_entries/. $pkgdir/usr/share/applications/
 }
