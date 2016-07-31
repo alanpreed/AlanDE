@@ -2,5 +2,5 @@ xbindkeys
 setxkbmap gb
 @lxpanel --profile AlanDE
 @pcmanfm --desktop --profile AlanDE
-@/etc/xdg/synapse/AlanDE/run_synapse.sh
+@/usr/share/AlanDE/synapse/run_synapse.sh
 # @xscreensaver -no-splash
