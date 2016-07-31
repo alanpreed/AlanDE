@@ -49,7 +49,7 @@ cycle-panels-backward=[]
 show-desktop=[]
 
 # Show the activities overview
-panel-main-menu=[
+panel-main-menu=[]
 
 # Show the run command prompt
 panel-run-dialog=[]

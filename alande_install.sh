@@ -10,7 +10,7 @@
 repo_list=(	
 			'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
-			'noto-font'	# Font
+			'noto-fonts' 'noto-emoji'	# Font
 			'synapse'				# Application launcher
 			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
 			'lxsession'		# Session manager
