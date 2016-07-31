@@ -23,6 +23,8 @@ repo_list=(
 			'midori' 		# Web browser (with flash plugin in AUR)
 			'lxappearance' 	# GTK theming GUI
 			'nspluginwrapper'
+			'xbindkeys'
+			'pinta' 'gpic-viewer' 'gnome-screenshot'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -83,16 +85,19 @@ ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
 
 # Custom Synapse config file
 mkdir -p $HOME/.config/synapse/
-ln -fs "/etc/xdg/synapse/AlanDE/config.json" "$HOME/.config/synapse/config.json"
+ln -fs "/usr/share/AlanDE/synapse/config.json" "$HOME/.config/synapse/config.json"
 
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/
-ln -fs "/etc/xdg/libfm/AlanDE/libfm.conf" "$HOME/.config/libfm/libfm.conf"
+ln -fs "/usr/share/AlanDE/libfm/libfm.conf" "$HOME/.config/libfm/libfm.conf"
 
+# Terminator config - won't follow a symlink
 mkdir -p $HOME/.config/terminator/
-ln -fs "/etc/xdg/terminator/AlanDE/config" "$HOME/.config/terminator/config"
+cp -f "/usr/share/AlanDE/terminator/config" "$HOME/.config/terminator/config"
 
 # LightDM greeter config - can't find any way to override the default config file. 
 # The greeter won't follow a symlink, either.
 sudo rm "/etc/lightdm/lightdm-gtk-greeter.conf"
-sudo cp "/etc/lightdm/AlanDE/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+sudo cp "/usr/share/AlanDE/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+
+ln -fs "/usr/share/AlanDE/xbindkeys/xbindkeysrc" "$HOME/.xbindkeysrc"

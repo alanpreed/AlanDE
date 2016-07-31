@@ -1,3 +1,4 @@
+xbindkeys
 setxkbmap gb
 @lxpanel --profile AlanDE
 @pcmanfm --desktop --profile AlanDE
