@@ -6,4 +6,4 @@
 # To see what DE values synapse understands, see:
 # http://bazaar.launchpad.net/~synapse-core/synapse-project/trunk/view/head:/src/core/desktop-file-service.vala
 
-XDG_CURRENT_DESKTOP=unity synapse -s 
+env XDG_CURRENT_DESKTOP=unity synapse -s 
