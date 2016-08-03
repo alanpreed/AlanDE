@@ -10,13 +10,9 @@
  			# lxsession, which is used at the moment because it fixes a number of bugs 
  			# in the current repository versionof lxsession.
  			'gtk3-typeahead'
-			'libdbusmenu-glib'
-			'libdbusmenu-gtk2'
-			'libindicator-gtk2'
-			'libdbusmenu-gtk2'
-			'libdbusmenu-gtk3'
-			'libindicator-gtk2' 
-			'libindicator-gtk3'
+			'libdbusmenu'
+			'libindicator'
+			'libindicator'
  			'lxsession-git')
 
 repo_list=(	
