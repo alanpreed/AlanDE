@@ -9,6 +9,7 @@
  			# Akk of the packages below are required in order to use the git version of 
  			# lxsession, which is used at the moment because it fixes a number of bugs 
  			# in the current repository versionof lxsession.
+			'libdbusmenu-glib'
 			'libdbusmenu-gtk2'
 			'libindicator-gtk2'
 			'libdbusmenu-gtk2'
