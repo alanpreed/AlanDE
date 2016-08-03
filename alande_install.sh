@@ -9,10 +9,9 @@
  			# Akk of the packages below are required in order to use the git version of 
  			# lxsession, which is used at the moment because it fixes a number of bugs 
  			# in the current repository versionof lxsession.
- 			'gtk3-typeahead'
 			'libdbusmenu'
 			'libindicator'
-			'libindicator'
+			'libappindicator'
  			'lxsession-git')
 
 repo_list=(	
