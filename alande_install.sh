@@ -5,7 +5,17 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'  'midori-flash'	'sublime-text')
+ aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git' 'sublime-text' 
+ 			# Akk of the packages below are required in order to use the git version of 
+ 			# lxsession, which is used at the moment because it fixes a number of bugs 
+ 			# in the current repository versionof lxsession.
+			'libdbusmenu-gtk2'
+			'libindicator-gtk2'
+			'libdbusmenu-gtk2'
+			'libdbusmenu-gtk3'
+			'libindicator-gtk2' 
+			'libindicator-gtk3'
+ 			'lxsession-git')
 
 repo_list=(	
 			'metacity'		# WM and compositor
@@ -19,11 +29,9 @@ repo_list=(
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			# File manager + extensions
 			'networkmanager' 'network-manager-applet'		# Networking
-			# Temporary
-			'midori' 		# Web browser (with flash plugin in AUR)
+			'midori'
 			'lxappearance' 	# GTK theming GUI
-			'nspluginwrapper'
-			'xbindkeys'
+			'xbindkeys'	# Used for some global keybindings, e.g. print screen
 			'pinta' 'gpic-viewer' 'gnome-screenshot'
 			)
 
