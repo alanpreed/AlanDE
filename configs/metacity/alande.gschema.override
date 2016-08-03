@@ -3,7 +3,7 @@ alt-tab-thumbnails=true
 
 [org.gnome.metacity.keybindings]
 toggle-tiled-left=['<Super>Left']
-toggle-tiled-right=['<Super><Right>']
+toggle-tiled-right=['<Super>Right']
 
 [org.gnome.desktop.wm.keybindings]
 
@@ -70,7 +70,7 @@ toggle-above=[]
 maximize=['<Super>Up']
 
 # Restore window
-unmaximize=['<Super>Down','<Alt>F5']
+unmaximize=['<Super>Down']
 
 # Toggle shaded state
 toggle-shaded=[]
