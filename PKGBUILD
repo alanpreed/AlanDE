@@ -46,9 +46,15 @@ package() {
 	install -d $pkgdir/usr/share/xsessions
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
 
-	# Gschema files (for Metacity)
+	# Gschema files (for Metacity and Pluma
 	install -d $pkgdir/usr/share/glib-2.0/schemas
 	cp -fr configs/metacity/. $pkgdir/usr/share/glib-2.0/schemas/
+	cp -fr configs/pluma/. $pkgdir/usr/share/glib-2.0/schemas/
+
+	# GTKSourceView theme (for Pluma)
+	# Theme taken from https://github.com/gmate/gmate/blob/master/styles/Blackboard.xml
+	install -d $pkgdir/usr/share/gtksourceview-2.0/styles
+	cp -fr configs/gtksourceview/. $pkgdir/usr/share/gtksourceview-2.0/styles
 
 	# GTK 2 and 3 config files
 	install -d %pkgdir/etc/gtkrc-2/
@@ -58,8 +64,14 @@ package() {
 	cp -fr configs/gtk3/. $pkgdir/etc/gtk-3.0/
 
 	# .desktop entries
-	install -d $pkgdir/usr/share/applications
+	install -d $pkgdir/usr/share/applications/
 	cp -fr configs/desktop_entries/. $pkgdir/usr/share/applications/
+
+	# Font settings
+	install -d $pkgdir/etc/fonts/conf.avail/
+	install -d $pkgdir/etc/fonts/conf.d/
+	cp -fr configs/fontconfig/. $pkgdir/etc/fonts/conf.avail/
+	ln -s "/etc/fonts/conf.avail/52-alande-fonts.conf" "${pkgdir}/etc/fonts/conf.d/52-alande-fonts.conf"
 
 	# These applications don't have a system-wide config override, and so
 	# require hacks post-install to make them use the AlanDE config files

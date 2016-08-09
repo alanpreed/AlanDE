@@ -1,0 +1,6 @@
+[org.mate.pluma]
+color-scheme='blackboard'
+insert-spaces=true
+auto-indent=true
+display-line-numbers=true
+bracket-matching=true

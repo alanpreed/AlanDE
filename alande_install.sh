@@ -5,7 +5,7 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git' 'sublime-text'
+ aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'
  			# Akk of the packages below are required in order to use the git version of 
  			# lxsession, which is used at the moment because it fixes a number of bugs 
  			# in the current repository versionof lxsession.
@@ -30,6 +30,7 @@ repo_list=(
 			'lxappearance' 	# GTK theming GUI
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
 			'pinta' 'gpic-viewer' 'gnome-screenshot'
+			'pluma' # Nice text editor
 			)
 
 aur_address='https://aur.archlinux.org/'
