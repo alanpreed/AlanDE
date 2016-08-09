@@ -34,13 +34,13 @@ With this project, I am trying to collect together and configure a range of soft
 - LightDM + GTK Greeter
   - This provides a login screen which fits with the GTK theme of the rest of the desktop
 - Midori
-  - I am trying this out as a lightweight browser alternative to Chrome(ium)/Firefox/Opera
+  - I am trying this out as a lightweight browser alternative to Chrome(ium)/Firefox/Opera.  It seems to crash fairly often, unfortunately.
 - Gpic-viewer
   - This is a nice lightweight picture viewer
 - Pinta
   - A simpler picture editor than GIMP, which is handy.
-- Sublime
-  - This is a very nice text editor, although it does regularly ask you to buy a license (which isn't cheap)
+- Pluma
+  - This is a customisable text editor, with useful features such as theming, syntax highlighting and multiple tabs
 
 ## Current Issues
 The main problem at the moment is getting QT applications to integrate with the GTK theme.  I still haven't managed to get this working properly, so for now I have just avoided QT applications.  This is a shame, as there are some really nice ones - such as Clementine.
