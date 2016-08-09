@@ -24,7 +24,7 @@ repo_list=(
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip'			# File manager + extensions
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'			# File manager + extensions
 			'networkmanager' 'network-manager-applet'		# Networking
 			'midori'
 			'lxappearance' 	# GTK theming GUI
