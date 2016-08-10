@@ -31,6 +31,8 @@ repo_list=(
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
 			'pinta' 'gpic-viewer' 'gnome-screenshot'
 			'pluma' # Nice text editor
+			'evince' #Nice pdf reader
+			'gparted' 
 			)
 
 aur_address='https://aur.archlinux.org/'
