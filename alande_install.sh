@@ -19,15 +19,14 @@ repo_list=(
 			'numix-themes' 			# GTK theme
 			'noto-fonts' 'noto-fonts-emoji'	# Font
 			'synapse'				# Application launcher
-			'lxpanel' 'lxinput' 'lxrandr' 'lxtask'
+			'lxpanel' 'lxrandr' 'lxtask'
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
-			'lightdm' 'lightdm-gtk-greeter' 'lightdm-gtk-greeter-settings'	'light-locker'
+			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'			# File manager + extensions
 			'networkmanager' 'network-manager-applet'		# Networking
 			'midori'
-			'lxappearance' 	# GTK theming GUI
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
 			'pinta' 'gpic-viewer' 'gnome-screenshot'
 			'pluma' # Nice text editor
