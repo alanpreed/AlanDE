@@ -33,8 +33,8 @@ With this project, I am trying to collect together and configure a range of soft
   - This is a handy little program for taking screenshots in various ways
 - LightDM + GTK Greeter
   - This provides a login screen which fits with the GTK theme of the rest of the desktop
-- Vivaldi
-  - An interesting, customisable browser
+- Chromium
+  - Standard web browser
 - Gpic-viewer
   - This is a nice lightweight picture viewer
 - Pinta
