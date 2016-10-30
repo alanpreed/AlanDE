@@ -12,26 +12,31 @@
 			'libdbusmenu'
 			'libindicator'
 			'libappindicator'
- 			'lxsession-git')
+ 			'lxsession-git'
+ 			'connman-gtk'
+ 			)
 
 repo_list=(	
 			'metacity'		# WM and compositor
 			'numix-themes' 			# GTK theme
 			'noto-fonts' 'noto-fonts-emoji'	# Font
 			'synapse'				# Application launcher
-			'lxpanel' 'lxrandr' 'lxtask'
+			'lxpanel' 'lxrandr'
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'			# File manager + extensions
-			'networkmanager' 'network-manager-applet'		# Networking
-			'midori'
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	'gvfs-mtp'		# File manager + extensions
+			'wpa-supplicant' 'connman'
+			#'networkmanager' 'network-manager-applet'		# Networking
+			'chromium'
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
-			'pinta' 'gpic-viewer' 'gnome-screenshot'
+			'pinta' 'gpicview' 'gnome-screenshot'
 			'pluma' # Nice text editor
 			'evince' #Nice pdf reader
 			'gparted' 
+			'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly'
+			'mpv'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -81,7 +86,7 @@ makepkg -sri --noconfirm
 
 # Enable necessary systemd services
 sudo systemctl enable lightdm.service
-sudo systemctl enable NetworkManager.service
+sudo systemctl enable connman.service
 
 # Symlink user config files.  As far as I can tell, these config files HAVE to be in a user's home
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.

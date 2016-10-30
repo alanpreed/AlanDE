@@ -73,6 +73,10 @@ package() {
 	cp -fr configs/fontconfig/. $pkgdir/etc/fonts/conf.avail/
 	ln -s "/etc/fonts/conf.avail/52-alande-fonts.conf" "${pkgdir}/etc/fonts/conf.d/52-alande-fonts.conf"
 
+	# Change default editor to nano
+	install -d $pkgdir/etc/profile.d/
+	cp -fr configs/profile/. $pkgdir/etc/profile.d/
+
 	# These applications don't have a system-wide config override, and so
 	# require hacks post-install to make them use the AlanDE config files
 	install -d $pkgdir/usr/share/AlanDE/libfm

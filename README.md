@@ -21,10 +21,10 @@ With this project, I am trying to collect together and configure a range of soft
   - I've chosen this terminal emulator because it supports splitting/tiling the terminal, while also being easily customisable.
 - PCManFM
   - I really like this file manager.  It has many useful features (when necessary packages are installed), such as support for MTP (Android) devices and compressed files.  I also use it for setting the desktop background.
-- Network Manager
-  - I've previously used connman, but this has no GUI/applet.  So, for this desktop environment I have chosen to use NetworkManager instead, along with an applet for the system tray.
-- Lxrandr, Lxtask
-  - These are small, useful utilities from LXDE.  I may not keep Lxtask as I am used to just using top, though I think that Lxrandr will come in useful - for example when extra monitors are connected.
+- Connman
+  - Seems to connect more reliably to networks than NetworkManager
+- Lxrandr
+  - A small, useful utility from LXDE which may be handy for configuring monitor setup
 - Pulseaudio + Pavucontrol
   - Being able to adjust the volume of individual applications via the pavucontrol mixer is very useful.
 - xbindkeys
@@ -33,8 +33,8 @@ With this project, I am trying to collect together and configure a range of soft
   - This is a handy little program for taking screenshots in various ways
 - LightDM + GTK Greeter
   - This provides a login screen which fits with the GTK theme of the rest of the desktop
-- Midori
-  - I am trying this out as a lightweight browser alternative to Chrome(ium)/Firefox/Opera.  It seems to crash fairly often, unfortunately.
+- Vivaldi
+  - An interesting, customisable browser
 - Gpic-viewer
   - This is a nice lightweight picture viewer
 - Pinta
