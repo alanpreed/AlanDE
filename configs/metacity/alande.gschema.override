@@ -1,3 +1,7 @@
+[org.gnome.desktop.interface]
+icon-theme='Numix-Circle'
+gtk-theme='Numix'
+
 [net.connman.gtk]
 launch-to-tray=true
 status-icon-enabled=true
