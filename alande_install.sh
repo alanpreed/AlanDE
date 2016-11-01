@@ -36,6 +36,7 @@ repo_list=(
 			'gparted' 
 			'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly'
 			'mpv'
+			'clementine'
 			)
 
 aur_address='https://aur.archlinux.org/'

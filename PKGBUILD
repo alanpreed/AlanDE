@@ -42,7 +42,7 @@ package() {
 	install -d $pkgdir/etc/xdg/lxpanel/AlanDE
 	cp -r configs/lxpanel/. $pkgdir/etc/xdg/lxpanel/AlanDE/
 
-	# Xsession config
+	# Xsession config (autostart lxsession)
 	install -d $pkgdir/usr/share/xsessions
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
 
@@ -67,7 +67,7 @@ package() {
 	install -d %pkgdir/etc/xdg/
 	cp -fr configs/qt4/. $pkgdir/etc/xdg/
 
-	# .desktop entries
+	# .desktop entries (lock and logout)
 	install -d $pkgdir/usr/share/applications/
 	cp -fr configs/desktop_entries/. $pkgdir/usr/share/applications/
 
@@ -80,6 +80,10 @@ package() {
 	# Change default editor to nano
 	install -d $pkgdir/etc/profile.d/
 	cp -fr configs/profile/. $pkgdir/etc/profile.d/
+
+	# Clementine running script
+	install -d $pkgdir/usr/share/AlanDE/clementine
+	cp -fr configs/clementine/. $pkgdir/usr/share/AlanDE/clementine/
 
 	# These applications don't have a system-wide config override, and so
 	# require hacks post-install to make them use the AlanDE config files
