@@ -22,13 +22,12 @@ repo_list=(
 			'noto-fonts' 'noto-fonts-emoji'	# Font
 			'synapse'				# Application launcher
 			'lxpanel' 'lxrandr'
-			'lxsession'		# Session manager
+			#'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	'gvfs-mtp'		# File manager + extensions
-			'wpa-supplicant' 'connman'
-			#'networkmanager' 'network-manager-applet'		# Networking
+			'wpa_supplicant' 'connman'
 			'chromium'
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
 			'pinta' 'gpicview' 'gnome-screenshot'
