@@ -109,11 +109,11 @@ cp -f "/usr/share/AlanDE/terminator/config" "$HOME/.config/terminator/config"
 
 # LightDM greeter config - can't find any way to override the default config file. 
 # The greeter won't follow a symlink, either.
-sudo rm "/etc/lightdm/lightdm-gtk-greeter.conf"
+sudo rm -f "/etc/lightdm/lightdm-gtk-greeter.conf"
 sudo cp "/usr/share/AlanDE/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
 
 # Replace Clementine .desktop entry so that it will use GTK icons
-sudo rm "/usr/share/applications/clementine.desktop"
-cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
+sudo rm -f "/usr/share/applications/clementine.desktop"
+sudo cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
 
 ln -fs "/usr/share/AlanDE/xbindkeys/xbindkeysrc" "$HOME/.xbindkeysrc"
