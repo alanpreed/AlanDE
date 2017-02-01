@@ -6,13 +6,6 @@
 
 # #AUR Dependencies:
  aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'
- 			# Akk of the packages below are required in order to use the git version of 
- 			# lxsession, which is used at the moment because it fixes a number of bugs 
- 			# in the current repository versionof lxsession.
-			'libdbusmenu'
-			'libindicator'
-			'libappindicator'
- 			'lxsession-git'
  			'connman-gtk'
  			)
 
@@ -22,11 +15,12 @@ repo_list=(
 			'noto-fonts' 'noto-fonts-emoji'	# Font
 			'synapse'				# Application launcher
 			'lxpanel' 'lxrandr'
-			#'lxsession'		# Session manager
+			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	'gvfs-mtp'		# File manager + extensions
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	
+			'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		# File manager + extensions
 			'wpa_supplicant' 'connman'
 			'chromium'
 			'xbindkeys'	# Used for some global keybindings, e.g. print screen
