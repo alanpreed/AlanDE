@@ -8,15 +8,15 @@ With this project, I am trying to collect together and configure a range of soft
 - Numix Theme
   - I have chosen to use the Numix Dark theme, as I like its simple flat styling. It seems well maintained, and supports both GTK2 and GTK3.
 - Numix Icon Theme and Numix Circle Icon Theme
-  - These have a large range of modern icons that fit well with the Numix GTK theme.
+  - These have a large range of modern-looking icons that fit well with the Numix GTK theme.
 - Noto Fonts
   - Finding a good font for Linux is something I've always found a bit of a challenge.  Noto seems like a decent one, although I haven't used it for very long.  DejaVu Sans is my current backup choice. 
 - Lxsession
-  - This is a lightweight session manager.  It handles autostarting programs for the desktop environment, as well as privilege escalation and a clipboard.  Currently I am using the git version of this, because the repository version doesn't contain several useful bugfixes/additions that are present in the git version.
+  - This is a lightweight session manager.  It handles autostarting programs for the desktop environment, as well as privilege escalation and a clipboard.
 - Lxpanel
   - This provides the panel at the bottom of the desktop, with important features such as a system tray and desktop pager.
 - Synapse
-  - I prefer to use a graphical launcher rather than a "Start" menu.  I very much like the Everything Launcher, but that is tied into Enlightenment.  Synapse is a decent replacement which seems to work well, though I've found that only one of the themes doesn't glitch out when the down arrow is pressed.
+  - I prefer to use a graphical launcher rather than a menu.  Synapse works well enough,  though I've found that only one of the themes doesn't glitch out when the down arrow is pressed.
 - Terminology
   - I've chosen this terminal emulator because it supports splitting/tiling the terminal, while also being easily customisable.
 - PCManFM
@@ -40,7 +40,4 @@ With this project, I am trying to collect together and configure a range of soft
 - Pinta
   - A simpler picture editor than GIMP, which is handy.
 - Pluma
-  - This is a customisable text editor, with useful features such as theming, syntax highlighting and multiple tabs
-
-## Current Issues
-The main problem at the moment is getting QT applications to integrate with the GTK theme.  I still haven't managed to get this working properly, so for now I have just avoided QT applications.  This is a shame, as there are some really nice ones - such as Clementine.
+  - Handy simple text editor
