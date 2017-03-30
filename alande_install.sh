@@ -63,7 +63,13 @@ for pkg in "${aur_list[@]}"; do
 		echo "Installing $pkg "
 		git clone $aur_address$pkg
 		cd $pkg
-		makepkg -sri --noconfirm
+
+		# Exit the script if we are unable to install a package
+		if !(makepkg -sri --noconfirm); then
+			echo "Installation of $pkg failed!"
+			cd ..
+			exit 1
+		fi
 		cd ..
 	else
 		echo "$pkg is already installed, skipping."
@@ -74,7 +80,12 @@ done
 for pkg in "${repo_list[@]}"; do
 	if !(pacman -Q $pkg 1>/dev/null); then
 		echo "Installing $pkg"
-		sudo pacman -S $pkg --noconfirm
+
+		# Exit the script if we are unable to install a package
+		if  !(sudo pacman -S $pkg --noconfirm);  then
+			echo "Installation of $testpkg failed!"
+			exit 1
+		fi
 	else
 		echo "$pkg is already installed, skipping."
 	fi
