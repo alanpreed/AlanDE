@@ -3,14 +3,14 @@
 # you don't need (and this header).
 
 ## arg 1:  the new package version
-pre_install() {
+# pre_install() {
 
-}
+# }
 
 # arg 1:  the new package version
-post_install() {
+# post_install() {
 
-}
+# }
 
 ## arg 1:  the new package version
 ## arg 2:  the old package version
@@ -20,9 +20,9 @@ post_install() {
 
 # arg 1:  the new package version
 # arg 2:  the old package version
-post_upgrade() {
+# post_upgrade() {
 
-}
+# }
 
 ## arg 1:  the old package version
 #pre_remove() {
@@ -30,6 +30,6 @@ post_upgrade() {
 #}
 
 # arg 1:  the old package version
-post_remove() {
+# post_remove() {
 
-}
+# }
