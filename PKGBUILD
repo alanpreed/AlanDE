@@ -101,4 +101,7 @@ package() {
 
 	install -d $pkgdir/usr/share/AlanDE/xbindkeys
 	cp -fr configs/xbindkeys/. $pkgdir/usr/share/AlanDE/xbindkeys/
+
+	install -d $pkgdir/usr/share/AlanDE/avahi
+	cp -fr configs/avahi/. $pkgdir/usr/share/AlanDE/avahi/
 }

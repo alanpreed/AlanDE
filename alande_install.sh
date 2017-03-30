@@ -6,15 +6,20 @@
 
 # #AUR Dependencies:
  aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'
- 			'connman-gtk'
+ 			'connman-gtk'	# GUI for networking
+			'vivaldi'
+			'vivaldi-ffmpeg-codecs'
+			'pepper-flash'
+			'visual-studio-code'
  			)
 
 repo_list=(	
-			'metacity'		# WM and compositor
-			'numix-themes' 			# GTK theme
+			'i3'		# WM and compositor
+			'compton'
+			'numix-gtk-theme' 			# GTK theme
 			'noto-fonts' 'noto-fonts-emoji'	# Font
-			'synapse'				# Application launcher
-			'lxpanel' 'lxrandr'
+			'dmenu'				# Application launcher
+			'lxpanel' 'lxrandr'	# Useful LXDE utilities
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
@@ -22,15 +27,15 @@ repo_list=(
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	
 			'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		# File manager + extensions
 			'wpa_supplicant' 'connman'
-			'chromium'
-			'xbindkeys'	# Used for some global keybindings, e.g. print screen
-			'pinta' 'gpicview' 'gnome-screenshot'
-			'pluma' # Nice text editor
-			'evince' #Nice pdf reader
+			'xbindkeys'
+			'gpicview' 'gnome-screenshot'	
+			'evince'
 			'gparted' 
 			'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly'
 			'mpv'
 			'clementine'
+
+			'nss-mdns' # Used for local network hostname resolution
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -111,3 +116,7 @@ sudo rm -f "/usr/share/applications/clementine.desktop"
 sudo cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
 
 ln -fs "/usr/share/AlanDE/xbindkeys/xbindkeysrc" "$HOME/.xbindkeysrc"
+
+# Replace the nss-mdns config file, to enable local hostname lookup
+sudo rm -f "/etc/nsswitch.conf"
+sudo cp -f "/usr/share/AlanDE/avahi/nsswitch.conf" "/etc/nsswitch.conf"
