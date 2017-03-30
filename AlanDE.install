@@ -3,14 +3,13 @@
 # you don't need (and this header).
 
 ## arg 1:  the new package version
-#pre_install() {
-	# do something here
-#}
+pre_install() {
+
+}
 
 # arg 1:  the new package version
 post_install() {
-	# Metacity config overrides require gschema recompiling
-	glib-compile-schemas /usr/share/glib-2.0/schemas
+
 }
 
 ## arg 1:  the new package version
@@ -22,8 +21,7 @@ post_install() {
 # arg 1:  the new package version
 # arg 2:  the old package version
 post_upgrade() {
-	# Metacity config overrides require gschema recompiling
-	glib-compile-schemas /usr/share/glib-2.0/schemas
+
 }
 
 ## arg 1:  the old package version
@@ -33,6 +31,5 @@ post_upgrade() {
 
 # arg 1:  the old package version
 post_remove() {
-	# Revert Metacity config changes
-	glib-compile-schemas /usr/share/glib-2.0/schemas
+
 }

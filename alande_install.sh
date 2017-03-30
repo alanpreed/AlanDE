@@ -103,8 +103,8 @@ sudo systemctl enable connman.service
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
 
 # GTK tweaks to fix Metacity title bar size
-mkdir -p $HOME/.config/gtk-3.0/
-ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
+#mkdir -p $HOME/.config/gtk-3.0/
+#ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
 
 # Custom Synapse config file
 mkdir -p $HOME/.config/synapse/
@@ -132,3 +132,8 @@ ln -fs "/usr/share/AlanDE/xbindkeys/xbindkeysrc" "$HOME/.xbindkeysrc"
 # Replace the nss-mdns config file, to enable local hostname lookup
 sudo rm -f "/etc/nsswitch.conf"
 sudo cp -f "/usr/share/AlanDE/avahi/nsswitch.conf" "/etc/nsswitch.conf"
+
+# Replace any i3 config with ours
+mkdir -p $HOME/.config/i3/
+rm -f "$HOME/.config/i3/config"
+cp -f "/usr/share/AlanDE/i3/config" "$HOME/.config/i3/config"

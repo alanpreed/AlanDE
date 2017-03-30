@@ -104,4 +104,7 @@ package() {
 
 	install -d $pkgdir/usr/share/AlanDE/avahi
 	cp -fr configs/avahi/. $pkgdir/usr/share/AlanDE/avahi/
+
+	install -d $pkgdir/usr/share/AlanDE/i3
+	cp -fr configs/i3/. $pkgdir/usr/share/AlanDE/i3/
 }
