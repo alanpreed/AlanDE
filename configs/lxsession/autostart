@@ -1,7 +1,6 @@
 xbindkeys
 setxkbmap gb
-@compton
+@compton -b
 @lxpanel --profile AlanDE
 @connman-gtk --tray
 @pcmanfm  -d --no-desktop --profile AlanDE
-@/usr/share/AlanDE/synapse/run_synapse.sh

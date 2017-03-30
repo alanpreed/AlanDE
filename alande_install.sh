@@ -103,12 +103,12 @@ sudo systemctl enable connman.service
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
 
 # GTK tweaks to fix Metacity title bar size
-#mkdir -p $HOME/.config/gtk-3.0/
-#ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
+mkdir -p $HOME/.config/gtk-3.0/
+ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
 
 # Custom Synapse config file
-mkdir -p $HOME/.config/synapse/
-ln -fs "/usr/share/AlanDE/synapse/config.json" "$HOME/.config/synapse/config.json"
+#mkdir -p $HOME/.config/synapse/
+#ln -fs "/usr/share/AlanDE/synapse/config.json" "$HOME/.config/synapse/config.json"
 
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/
