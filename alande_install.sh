@@ -7,10 +7,11 @@
 # #AUR Dependencies:
  aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'
  			'connman-gtk'	# GUI for networking
-			'vivaldi'
-			'vivaldi-ffmpeg-codecs'
-			'pepper-flash'
-			'visual-studio-code'
+			# Don't install the these during testing
+			#'vivaldi'
+			#'vivaldi-ffmpeg-codecs'
+			#'pepper-flash'
+			#'visual-studio-code'
  			)
 
 repo_list=(	

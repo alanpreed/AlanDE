@@ -3,5 +3,5 @@ setxkbmap gb
 @compton
 @lxpanel --profile AlanDE
 @connman-gtk --tray
-@pcmanfm --desktop --profile AlanDE
+@pcmanfm  -d --no-desktop --profile AlanDE
 @/usr/share/AlanDE/synapse/run_synapse.sh
