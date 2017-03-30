@@ -46,16 +46,6 @@ package() {
 	install -d $pkgdir/usr/share/xsessions
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
 
-	# Gschema files (for Metacity and Pluma
-	install -d $pkgdir/usr/share/glib-2.0/schemas
-	cp -fr configs/metacity/. $pkgdir/usr/share/glib-2.0/schemas/
-	cp -fr configs/pluma/. $pkgdir/usr/share/glib-2.0/schemas/
-
-	# GTKSourceView theme (for Pluma)
-	# Theme taken from https://github.com/gmate/gmate/blob/master/styles/Blackboard.xml
-	install -d $pkgdir/usr/share/gtksourceview-2.0/styles
-	cp -fr configs/gtksourceview/. $pkgdir/usr/share/gtksourceview-2.0/styles
-
 	# GTK 2 and 3 config files
 	install -d %pkgdir/etc/gtkrc-2/
 	cp -fr configs/gtk2/. $pkgdir/etc/gtkrc-2.0/
