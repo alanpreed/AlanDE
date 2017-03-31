@@ -18,6 +18,7 @@ repo_list=(
 			'i3'		# WM and compositor
 			'compton'
 			'numix-gtk-theme' 			# GTK theme
+			'gtk-engine-murrine'
 			'noto-fonts' 'noto-fonts-emoji'	# Font
 			'dmenu'				# Application launcher
 			'lxpanel' 'lxrandr'	# Useful LXDE utilities
@@ -41,6 +42,7 @@ repo_list=(
 
 aur_address='https://aur.archlinux.org/'
 
+package_name='AlanDE-git'
 
 # Check that pacman is available
 if  !(hash pacman 2>/dev/null);  then
@@ -93,7 +95,17 @@ for pkg in "${repo_list[@]}"; do
 done
 
 # Install AlanDE package
-makepkg -sri --noconfirm
+if !(pacman -Q $package_name 1>/dev/null); then
+		echo "Installing $package_name"
+
+		if (!makepkg -sri --noconfirm); then
+			echo "Installation of $package_name failed!"
+			exit 1
+		fi
+else
+	echo "AlanDE already installed, skipping."
+fi
+
 
 # Enable necessary systemd services
 sudo systemctl enable lightdm.service
@@ -101,14 +113,6 @@ sudo systemctl enable connman.service
 
 # Symlink user config files.  As far as I can tell, these config files HAVE to be in a user's home
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
-
-# GTK tweaks to fix Metacity title bar size
-mkdir -p $HOME/.config/gtk-3.0/
-ln -fs "/etc/gtk-3.0/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
-
-# Custom Synapse config file
-#mkdir -p $HOME/.config/synapse/
-#ln -fs "/usr/share/AlanDE/synapse/config.json" "$HOME/.config/synapse/config.json"
 
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/

@@ -3,4 +3,4 @@ setxkbmap gb
 @compton -b
 @lxpanel --profile AlanDE
 @connman-gtk --tray
-@pcmanfm  -d --no-desktop --profile AlanDE
+@pcmanfm  -b --profile AlanDE
