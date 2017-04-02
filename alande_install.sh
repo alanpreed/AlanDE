@@ -98,7 +98,7 @@ done
 if !(pacman -Q $package_name 1>/dev/null); then
 		echo "Installing $package_name"
 
-		if (!makepkg -sri --noconfirm); then
+		if !(makepkg -sri --noconfirm); then
 			echo "Installation of $package_name failed!"
 			exit 1
 		fi
