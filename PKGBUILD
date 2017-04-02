@@ -80,9 +80,6 @@ package() {
 	install -d $pkgdir/usr/share/AlanDE/libfm
 	cp -r configs/libfm/. $pkgdir/usr/share/AlanDE/libfm
 
-	install -d $pkgdir/usr/share/AlanDE/synapse
-	cp -r configs/synapse/. $pkgdir/usr/share/AlanDE/synapse
-
 	install -d $pkgdir/usr/share/AlanDE/lightdm
 	cp -fr configs/lightdm/. $pkgdir/usr/share/AlanDE/lightdm
 
