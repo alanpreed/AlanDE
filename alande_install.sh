@@ -51,7 +51,7 @@ if  !(hash pacman 2>/dev/null);  then
 fi
 
 echo "Updating repositories prior to installation."
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --ignore linux --ignore virtualbox-guest-modules-arch --noconfirm
 
 # Make sure git is available for handling AUR packages
 if  !(hash git 2>/dev/null);  then
