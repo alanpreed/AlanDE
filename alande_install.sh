@@ -5,7 +5,8 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'numix-icon-theme-git' 'numix-circle-icon-theme-git'
+ aur_list=(	'i3-gaps'
+	 		'numix-icon-theme-git' 'numix-circle-icon-theme-git'
  			'connman-gtk'	# GUI for networking
 			# Don't install the these during testing
 			#'vivaldi'
@@ -15,7 +16,7 @@
  			)
 
 repo_list=(	
-			'i3'		# WM and compositor
+			#'i3'		# WM and compositor
 			'compton'
 			'numix-gtk-theme' 			# GTK theme
 			'gtk-engine-murrine'
