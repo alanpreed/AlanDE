@@ -20,7 +20,7 @@ repo_list=(
 			'numix-gtk-theme' 			# GTK theme
 			'gtk-engine-murrine'
 			'noto-fonts' 'noto-fonts-emoji'	# Font
-			'dmenu'				# Application launcher
+			'synapse'				# Application launcher
 			'lxpanel' 'lxrandr'	# Useful LXDE utilities
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
@@ -113,6 +113,10 @@ sudo systemctl enable connman.service
 
 # Symlink user config files.  As far as I can tell, these config files HAVE to be in a user's home
 # directory to work, plus I can't get the PKGBUILD or .install script to create these in a nicer way.
+
+# Custom Synapse config file
+mkdir -p $HOME/.config/synapse/
+ln -fs "/usr/share/AlanDE/synapse/config.json" "$HOME/.config/synapse/config.json"
 
 # libfm config - this affects PCManFM
 mkdir -p $HOME/.config/libfm/

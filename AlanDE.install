@@ -8,9 +8,10 @@
 # }
 
 # arg 1:  the new package version
-# post_install() {
-
-# }
+post_install() {
+	# gschemas must be recompiled to enact changes
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+}
 
 ## arg 1:  the new package version
 ## arg 2:  the old package version
@@ -20,9 +21,10 @@
 
 # arg 1:  the new package version
 # arg 2:  the old package version
-# post_upgrade() {
-
-# }
+post_upgrade() {
+	# gschemas must be recompiled to enact changes
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+}
 
 ## arg 1:  the old package version
 #pre_remove() {
@@ -30,6 +32,7 @@
 #}
 
 # arg 1:  the old package version
-# post_remove() {
-
-# }
+post_remove() {
+	# gschemas must be recompiled to enact changes
+	glib-compile-schemas /usr/share/glib-2.0/schemas
+}

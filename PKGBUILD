@@ -1,7 +1,7 @@
 # This package should install (as dependencies) and configure all of the software that makes up Alan's DE.
 
 # Maintainer: Alan Reed
-pkgname=AlanDE-git # '-bzr', '-git', '-hg' or '-svn'
+pkgname=AlanDE-git
 pkgver=r48.6e76545
 pkgrel=1
 pkgdesc="Alan's Desktop Environment"
@@ -14,9 +14,6 @@ makedepends=('git')
 provides=("${pkgname%-git}")
 install="${pkgname%-git}.install"
 
-source=('git+https://github.com/alanpreed/AlanDE.git')
-md5sums=('SKIP')
-
 
 pkgver() {
 	cd "$srcdir/${pkgname%-git}"
@@ -24,6 +21,12 @@ pkgver() {
 	# Git, no tags available (from example PKGBUILD)
 	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
+
+prepare() {
+	# Create a symlink so that we can use the local git repository
+	ln -snf "$startdir" "$srcdir/${pkgname%-git}"
+}
+
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
@@ -45,6 +48,10 @@ package() {
 	# Xsession config (autostart lxsession)
 	install -d $pkgdir/usr/share/xsessions
 	cp -r configs/xsession/. $pkgdir/usr/share/xsessions
+
+	# Gschema files (for connman-gtk configuration)
+	install -d $pkgdir/usr/share/glib-2.0/schemas
+	cp -fr configs/gschema/. $pkgdir/usr/share/glib-2.0/schemas/
 
 	# GTK 2 and 3 config files
 	install -d %pkgdir/etc/gtkrc-2/
@@ -79,6 +86,9 @@ package() {
 	# require hacks post-install to make them use the AlanDE config files
 	install -d $pkgdir/usr/share/AlanDE/libfm
 	cp -r configs/libfm/. $pkgdir/usr/share/AlanDE/libfm
+
+	install -d $pkgdir/usr/share/AlanDE/synapse
+	cp -r configs/synapse/. $pkgdir/usr/share/AlanDE/synapse
 
 	install -d $pkgdir/usr/share/AlanDE/lightdm
 	cp -fr configs/lightdm/. $pkgdir/usr/share/AlanDE/lightdm
