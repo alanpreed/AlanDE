@@ -4,3 +4,4 @@ setxkbmap gb
 @lxpanel --profile AlanDE
 @connman-gtk --tray
 @pcmanfm  -d --profile AlanDE
+@/usr/share/AlanDE/synapse/run_synapse.sh
