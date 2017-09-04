@@ -82,6 +82,10 @@ package() {
 	install -d $pkgdir/usr/share/AlanDE/clementine
 	cp -fr configs/clementine/. $pkgdir/usr/share/AlanDE/clementine/
 
+	# Rofi default config
+	install -d $pkgdir/etc/
+	cp -fr configs/rofi/. $pkgdir/etc/
+
 	# These applications don't have a system-wide config override, and so
 	# require hacks post-install to make them use the AlanDE config files
 	install -d $pkgdir/usr/share/AlanDE/libfm
@@ -96,12 +100,12 @@ package() {
 	install -d $pkgdir/usr/share/AlanDE/terminator
 	cp -fr configs/terminator/. $pkgdir/usr/share/AlanDE/terminator
 
-	install -d $pkgdir/usr/share/AlanDE/xbindkeys
-	cp -fr configs/xbindkeys/. $pkgdir/usr/share/AlanDE/xbindkeys/
-
 	install -d $pkgdir/usr/share/AlanDE/avahi
 	cp -fr configs/avahi/. $pkgdir/usr/share/AlanDE/avahi/
 
-	install -d $pkgdir/usr/share/AlanDE/i3
-	cp -fr configs/i3/. $pkgdir/usr/share/AlanDE/i3/
+	install -d $pkgdir/usr/share/AlanDE/bspwm
+	cp -fr configs/bspwm/. $pkgdir/usr/share/AlanDE/bspwm/
+
+	install -d $pkgdir/usr/share/AlanDE/sxhkd
+	cp -fr configs/sxhkd/. $pkgdir/usr/share/AlanDE/sxhkd/
 }
