@@ -5,7 +5,7 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	'i3-gaps'
+ aur_list=(	#'i3-gaps'
 	 		'numix-icon-theme-git' 'numix-circle-icon-theme-git'
  			'connman-gtk'	# GUI for networking
 			# Don't install the these during testing
@@ -17,12 +17,16 @@
 
 repo_list=(	
 			#'i3'		# WM and compositor
+			'bspwm'
+			'sxhkd'
 			'compton'
 			'numix-gtk-theme' 			# GTK theme
 			'gtk-engine-murrine'
-			'noto-fonts' 'noto-fonts-emoji'	# Font
-			'synapse'				# Application launcher
-			'lxpanel' 'lxrandr'	# Useful LXDE utilities
+			'noto-fonts' 'noto-fonts-emoji' 'noto-fonts-cjk'
+			'synapse'		# Application launcher
+			'rofi'
+			'lxpanel' 
+			'arandr'		# Monitor configuration utility
 			'lxsession'		# Session manager
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
@@ -30,7 +34,6 @@ repo_list=(
 			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	
 			'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		# File manager + extensions
 			'wpa_supplicant' 'connman'
-			'xbindkeys'
 			'gpicview' 'gnome-screenshot'	
 			'evince'
 			'gparted' 
@@ -136,13 +139,16 @@ sudo cp "/usr/share/AlanDE/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/light
 sudo rm -f "/usr/share/applications/clementine.desktop"
 sudo cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
 
-ln -fs "/usr/share/AlanDE/xbindkeys/xbindkeysrc" "$HOME/.xbindkeysrc"
-
 # Replace the nss-mdns config file, to enable local hostname lookup
 sudo rm -f "/etc/nsswitch.conf"
 sudo cp -f "/usr/share/AlanDE/avahi/nsswitch.conf" "/etc/nsswitch.conf"
 
-# Replace any i3 config with ours
-mkdir -p $HOME/.config/i3/
-rm -f "$HOME/.config/i3/config"
-cp -f "/usr/share/AlanDE/i3/config" "$HOME/.config/i3/config"
+# Replace any bspwm config with ours
+mkdir -p $HOME/.config/bspwm/
+rm -f "$HOME/.config/bspwm/bspwmrc"
+cp -f "/usr/share/AlanDE/bspwm/bspwmrc" "$HOME/.config/bspwm/bspwmrc"
+
+# Replace any sxhkd config with ours
+mkdir -p $HOME/.config/sxhkd/
+rm -f "$HOME/.config/sxhkd/sxhkdrc"
+cp -f "/usr/share/AlanDE/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
