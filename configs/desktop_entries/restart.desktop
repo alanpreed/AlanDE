@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Reboot
+Icon=system-restart
+Exec=reboot
+Comment=Reboot the computer
+StartupNotify=false
+Terminal=false
+Categories=System

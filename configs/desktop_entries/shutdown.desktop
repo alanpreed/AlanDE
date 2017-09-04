@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Shut Down
+Icon=system-shutdown
+Exec=shutdown -h now
+Comment=Shut down the computer
+StartupNotify=false
+Terminal=false
+Categories=System
