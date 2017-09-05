@@ -5,19 +5,17 @@
 # any required services for the DE.
 
 # #AUR Dependencies:
- aur_list=(	#'i3-gaps'
+ aur_list=(	
 	 		'numix-icon-theme-git' 'numix-circle-icon-theme-git'
  			'connman-gtk'	# GUI for networking
-			# Don't install the these during testing
-			#'vivaldi'
-			#'vivaldi-ffmpeg-codecs'
+			# Don't install these during testing
+			#'opera-ffmpeg-codecs'
 			#'pepper-flash'
 			#'visual-studio-code'
  			)
 
 repo_list=(	
-			#'i3'		# WM and compositor
-			'bspwm'
+			'bspwm'						# WM and compositor
 			'sxhkd'
 			'compton'
 			'numix-gtk-theme' 			# GTK theme
@@ -30,8 +28,8 @@ repo_list=(
 			'terminator'	# Terminal
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
 			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	
-			'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		# File manager + extensions
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	# File manager + extensions
+			'exfat-utils' 'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		
 			'wpa_supplicant' 'connman'
 			'gpicview' 'gnome-screenshot'	
 			'evince'
@@ -39,8 +37,7 @@ repo_list=(
 			'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly'
 			'mpv'
 			'clementine'
-
-			'nss-mdns' # Used for local network hostname resolution
+			'opera'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -133,10 +130,6 @@ sudo cp "/usr/share/AlanDE/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/light
 # Replace Clementine .desktop entry so that it will use GTK icons
 sudo rm -f "/usr/share/applications/clementine.desktop"
 sudo cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
-
-# Replace the nss-mdns config file, to enable local hostname lookup
-sudo rm -f "/etc/nsswitch.conf"
-sudo cp -f "/usr/share/AlanDE/avahi/nsswitch.conf" "/etc/nsswitch.conf"
 
 # Replace any bspwm config with ours
 mkdir -p $HOME/.config/bspwm/

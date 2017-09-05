@@ -97,9 +97,6 @@ package() {
 	install -d $pkgdir/usr/share/AlanDE/terminator
 	cp -fr configs/terminator/. $pkgdir/usr/share/AlanDE/terminator
 
-	install -d $pkgdir/usr/share/AlanDE/avahi
-	cp -fr configs/avahi/. $pkgdir/usr/share/AlanDE/avahi/
-
 	install -d $pkgdir/usr/share/AlanDE/bspwm
 	cp -fr configs/bspwm/. $pkgdir/usr/share/AlanDE/bspwm/
 

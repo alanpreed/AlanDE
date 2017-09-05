@@ -32,13 +32,6 @@ Plugin {
   }
 }
 Plugin {
-  type=wincmd
-  Config {
-    Button1=iconify
-    Button2=shade
-  }
-}
-Plugin {
   type=space
   Config {
     Size=4

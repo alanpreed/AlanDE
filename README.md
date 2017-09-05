@@ -1,12 +1,14 @@
 # Alan's Desktop Environment
 
-With this project, I am trying to collect together and configure a range of software to form a cohesive desktop environment on Arch Linux.  The software that I have selected is listed below.
+With this project, I am trying to collect together and configure a range of software to form a cohesive desktop environment on Arch Linux.
 
 ## Core Software
 - Display manager:
   - LightDM, with GTK Greeter to provide consistent theming
 - Window manager:
   - bspwm, with Compton for compositing
+- Key bindings:
+  - sxhkd
 - Session manager:
   - Lxsession, provides privilege escalation and a clipboard in addition to autostarting required programs.
 - Theme
@@ -27,6 +29,16 @@ With this project, I am trying to collect together and configure a range of soft
   - Pulseaudio, with pavucontrol to allow per-application volume adjustment
 
 ## Extras
-- Visual Studio Code
-- gnome-screenshot
-- gpic-viewer
+- Text editor:
+  - Visual Studio Code
+- Screenshot utility:
+  - gnome-screenshot
+- Simple image viewer:
+  - gpic-viewer
+- PDF viewer:
+  - evince
+- Video player:
+  - mpv
+- Music player:
+  - Clementine
+
