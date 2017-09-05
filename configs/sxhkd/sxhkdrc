@@ -18,6 +18,18 @@ super + Escape
 Print
 	gnome-screenshot -c
 
+# Mute key
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Volume up
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Volume down
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 #
 # bspwm hotkeys
 #
