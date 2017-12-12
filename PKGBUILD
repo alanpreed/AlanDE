@@ -86,7 +86,7 @@ package() {
 	install -d $pkgdir/etc/
 	cp -fr configs/rofi/. $pkgdir/etc/
 
-	# Iptables default ipv4 config
+	# Iptables default IPv4 config. IPv6 should be disabled using "ipv6.disable_ipv6=1" in kernel parameters. 
 	install -d $pkgdir/iptables
 	cp -fr configs/iptables/. $pkgdir/iptables
 
