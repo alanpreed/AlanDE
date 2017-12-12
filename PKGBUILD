@@ -86,6 +86,10 @@ package() {
 	install -d $pkgdir/etc/
 	cp -fr configs/rofi/. $pkgdir/etc/
 
+	# Iptables default ipv4 config
+	install -d $pkgdir/iptables
+	cp -fr configs/iptables/. $pkgdir/iptables
+
 	# These applications don't have a system-wide config override, and so
 	# require hacks post-install to make them use the AlanDE config files
 	install -d $pkgdir/usr/share/AlanDE/libfm
