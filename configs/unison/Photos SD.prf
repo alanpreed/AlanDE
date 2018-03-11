@@ -1,0 +1,5 @@
+# Unison preferences
+label = Sync photos with SD card
+root = /home/alan/Photos
+root = /run/media/alan/6438-3831/Photos
+fat = true

@@ -1,0 +1,5 @@
+# Unison preferences
+label = Sync photos with HDD
+root = /home/alan/Photos
+root = /run/media/alan/Elements/Photos
+perms = 0

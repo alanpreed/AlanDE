@@ -106,4 +106,7 @@ package() {
 
 	install -d $pkgdir/usr/share/AlanDE/sxhkd
 	cp -fr configs/sxhkd/. $pkgdir/usr/share/AlanDE/sxhkd/
+
+	install -d $pkgdir/usr/share/AlanDE/unison
+	cp -fr configs/unison/. $pkgdir/usr/share/AlanDE/unison/
 }

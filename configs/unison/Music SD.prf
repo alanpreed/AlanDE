@@ -1,0 +1,5 @@
+# Unison preferences
+label = Sync music with SD card
+root = /home/alan/Music
+root = /run/media/alan/6438-3831/Music
+fat = true

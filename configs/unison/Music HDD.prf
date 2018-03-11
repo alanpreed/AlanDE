@@ -1,0 +1,5 @@
+# Unison preferences
+label = Sync music with HDD
+root = /home/alan/Music
+root = /run/media/alan/Elements/Music
+perms = 0

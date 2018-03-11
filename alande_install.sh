@@ -53,6 +53,8 @@ repo_list=(
 			'shotwell'
 			# Browser
 			'firefox'
+			# File synchroniser
+			'unison'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -152,3 +154,7 @@ cp -f "/usr/share/AlanDE/bspwm/bspwmrc" "$HOME/.config/bspwm/bspwmrc"
 mkdir -p $HOME/.config/sxhkd/
 rm -f "$HOME/.config/sxhkd/sxhkdrc"
 cp -f "/usr/share/AlanDE/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
+
+# Copy over Unison synchronisation profiles
+mkdir -p $HOME/.unison/
+cp -f "/usr/share/AlanDE/unison/*" "$HOME/.unison/"
