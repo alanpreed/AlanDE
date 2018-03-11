@@ -6,38 +6,53 @@
 
 # #AUR Dependencies:
  aur_list=(	
+	 		# Icon theme
 	 		'numix-icon-theme-git' 'numix-circle-icon-theme-git'
- 			'connman-gtk'	# GUI for networking
-			# Don't install these during testing
-			#'opera-ffmpeg-codecs'
-			#'pepper-flash'
-			#'visual-studio-code'
+			 # GUI for networking
+ 			'connman-gtk'	
  			)
 
 repo_list=(	
-			'bspwm'						# WM and compositor
-			'sxhkd'
-			'compton'
-			'numix-gtk-theme' 			# GTK theme
+			# WM and compositor
+			'bspwm'	'sxhkd'	'compton'
+			# GTK theme	
+			'numix-gtk-theme' 			
 			'gtk-engine-murrine'
 			'noto-fonts' 'noto-fonts-emoji' 'noto-fonts-cjk'	
-			'rofi'			# Application launcher
+			# Application launcher
+			'rofi'
 			'lxpanel' 
-			'arandr'		# Monitor configuration utility
-			'lxsession'		# Session manager
-			'terminator'	# Terminal
+			# Session manager
+			'lxsession'	
+			# Terminal
+			'terminator'	
+			# Display manager
 			'lightdm' 'lightdm-gtk-greeter'	'light-locker'
-			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'	# Sound 
-			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	# File manager + extensions
-			'exfat-utils' 'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'		
+			# Sound 
+			'pulseaudio' 'pulseaudio-alsa' 'pavucontrol'
+			# File manager + extensions
+			'pcmanfm' 'gvfs' 'xarchiver' 'p7zip' 'ntfs-3g'	
+			'exfat-utils' 'gvfs-mtp' 'gvfs-smb' 'unzip' 'unrar'
+			# Networking	
 			'wpa_supplicant' 'connman'
-			'gpicview' 'gnome-screenshot'	
+			# Photo viewer
+			'gpicview' 'gnome-screenshot'
+			# Monitor configuration utility
+			'arandr'
+			# PDF viewer
 			'evince'
+			# Partitioning tool
 			'gparted' 
+			# Media codecs
 			'gst-libav' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly'
+			# Video player
 			'mpv'
+			# Music player
 			'clementine'
-			'opera'
+			# Photo manager
+			'shotwell'
+			# Browser
+			'firefox'
 			)
 
 aur_address='https://aur.archlinux.org/'
@@ -127,10 +142,6 @@ cp -f "/usr/share/AlanDE/terminator/config" "$HOME/.config/terminator/config"
 # The greeter won't follow a symlink, either.
 sudo rm -f "/etc/lightdm/lightdm-gtk-greeter.conf"
 sudo cp "/usr/share/AlanDE/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
-
-# Replace Clementine .desktop entry so that it will use GTK icons
-sudo rm -f "/usr/share/applications/clementine.desktop"
-sudo cp -f "/usr/share/AlanDE/clementine/desktop_entry/clementine.desktop" "/usr/share/applications/clementine.desktop"
 
 # Replace any bspwm config with ours
 mkdir -p $HOME/.config/bspwm/

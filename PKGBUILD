@@ -64,7 +64,7 @@ package() {
 	install -d %pkgdir/etc/xdg/
 	cp -fr configs/qt4/. $pkgdir/etc/xdg/
 
-	# .desktop entries (lock and logout)
+	# .desktop entries
 	install -d $pkgdir/usr/share/applications/
 	cp -fr configs/desktop_entries/. $pkgdir/usr/share/applications/
 
