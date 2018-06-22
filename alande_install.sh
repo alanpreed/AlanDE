@@ -157,4 +157,4 @@ cp -f "/usr/share/AlanDE/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
 
 # Copy over Unison synchronisation profiles
 mkdir -p $HOME/.unison/
-cp -f "/usr/share/AlanDE/unison/*" "$HOME/.unison/"
+cp -f /usr/share/AlanDE/unison/* "$HOME/.unison/"
