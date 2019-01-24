@@ -76,6 +76,20 @@ if  !(hash git 2>/dev/null);  then
 	sudo pacman -S git --noconfirm
 fi
 
+# Install repository packages
+for pkg in "${repo_list[@]}"; do
+	if !(pacman -Q $pkg 1>/dev/null); then
+		echo "Installing $pkg"
+
+		# Exit the script if we are unable to install a package
+		if  !(sudo pacman -S $pkg --noconfirm);  then
+			echo "Installation of $testpkg failed!"
+			exit 1
+		fi
+	else
+		echo "$pkg is already installed, skipping."
+	fi
+done
 
 # Install AUR packages
 for pkg in "${aur_list[@]}"; do
@@ -91,21 +105,6 @@ for pkg in "${aur_list[@]}"; do
 			exit 1
 		fi
 		cd ..
-	else
-		echo "$pkg is already installed, skipping."
-	fi
-done
-
-# Install repository packages
-for pkg in "${repo_list[@]}"; do
-	if !(pacman -Q $pkg 1>/dev/null); then
-		echo "Installing $pkg"
-
-		# Exit the script if we are unable to install a package
-		if  !(sudo pacman -S $pkg --noconfirm);  then
-			echo "Installation of $testpkg failed!"
-			exit 1
-		fi
 	else
 		echo "$pkg is already installed, skipping."
 	fi
