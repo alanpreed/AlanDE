@@ -14,7 +14,7 @@
 
 repo_list=(	
 			# WM and compositor
-			'bspwm'	'sxhkd'	'compton'
+			'bspwm'	'sxhkd'	'compton' 'xorg-server'
 			# GTK theme	
 			'numix-gtk-theme' 			
 			'gtk-engine-murrine'
