@@ -39,6 +39,8 @@ repo_list=(
 			'gpicview' 'gnome-screenshot'
 			# Monitor configuration utility
 			'arandr'
+			# Backlight control
+			'light'
 			# PDF viewer
 			'evince'
 			# Partitioning tool
