@@ -57,6 +57,8 @@ repo_list=(
 			'firefox'
 			# File synchroniser
 			'unison'
+			# Network and task monitor utilities
+			'nethogs' 'htop'
 			)
 
 aur_address='https://aur.archlinux.org/'
