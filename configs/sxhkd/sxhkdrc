@@ -30,6 +30,13 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+# Brightness up
+XF86MonBrightnessUp
+	light -A 5
+# Brightness down
+XF86MonBrightnessDown
+	light -U 5
+
 #
 # bspwm hotkeys
 #

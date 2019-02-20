@@ -14,7 +14,7 @@
 
 repo_list=(	
 			# WM and compositor
-			'bspwm'	'sxhkd'	'compton'
+			'bspwm'	'sxhkd'	'compton' 'xorg-server'
 			# GTK theme	
 			'numix-gtk-theme' 			
 			'gtk-engine-murrine'
@@ -39,6 +39,8 @@ repo_list=(
 			'gpicview' 'gnome-screenshot'
 			# Monitor configuration utility
 			'arandr'
+			# Backlight control
+			'light'
 			# PDF viewer
 			'evince'
 			# Partitioning tool
@@ -55,6 +57,8 @@ repo_list=(
 			'firefox'
 			# File synchroniser
 			'unison'
+			# Network and task monitor utilities
+			'nethogs' 'htop'
 			)
 
 aur_address='https://aur.archlinux.org/'

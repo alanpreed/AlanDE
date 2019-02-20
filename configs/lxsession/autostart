@@ -1,4 +1,3 @@
-setxkbmap gb
 @sxhkd
 @compton -b
 @lxpanel --profile AlanDE
