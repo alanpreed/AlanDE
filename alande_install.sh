@@ -14,7 +14,7 @@
 
 repo_list=(	
 			# WM and compositor
-			'bspwm'	'sxhkd'	'compton' 'xorg-server'
+			'bspwm'	'sxhkd'	'picom' 'xorg-server'
 			# GTK theme	
 			'numix-gtk-theme' 			
 			'gtk-engine-murrine'
@@ -161,3 +161,7 @@ cp -f "/usr/share/AlanDE/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
 # Copy over Unison synchronisation profiles
 mkdir -p $HOME/.unison/
 cp -f /usr/share/AlanDE/unison/* "$HOME/.unison/"
+
+# Replace picom config file
+sudo rm -f "/etc/xdg/picom.conf"
+cp -f "/usr/share/AlanDE/picom/picom.conf" "/etc/xdg/picom.conf"

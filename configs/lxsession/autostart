@@ -1,5 +1,5 @@
 @sxhkd
-@compton -b
+@picom -b
 @lxpanel --profile AlanDE
 @connman-gtk --tray
 @pcmanfm -d --profile AlanDE

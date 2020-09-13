@@ -109,4 +109,7 @@ package() {
 
 	install -d $pkgdir/usr/share/AlanDE/unison
 	cp -fr configs/unison/. $pkgdir/usr/share/AlanDE/unison/
+
+	install -d $pkgdir/usr/share/AlanDE/picom
+	cp -fr configs/picom/. $pkgdir/usr/share/AlanDE/picom/
 }
